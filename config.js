@@ -15,6 +15,7 @@ exports.config = {
 	files: {
 		javascripts: {
 			joinTo: {
+				'.htaccess': '/app/assets/.htaccess',
 				'js/app.js': /^app/,
 				'js/modernizr.js': 'bower_components/modernizr/modernizr.js',
 				'js/vendor.js': [

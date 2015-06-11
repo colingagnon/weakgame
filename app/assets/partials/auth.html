@@ -1,0 +1,38 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 col-sm-6">
+			<div class="row text-spacer">
+				<h3>Welcome Adventurer!</h3>
+				
+			    <p>WeakGame is an action game were you slay your foes and become more powerful!</p>
+			    
+			    <p>What more do you need to know? Start your adventure now!</p>
+			    
+			    <div class="alert alert-danger" role="alert" data-ng-show="auth.errorShow === true">
+					<button type="button" class="close" aria-label="Close" data-ng-click="auth.errorShow = false"><span aria-hidden="true">&times;</span></button>
+					{{ auth.errorMessage }}
+				</div>
+			    
+			    <form>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Email address</label>
+				    	<input type="email" class="form-control" data-ng-model="auth.data.email" placeholder="Enter email">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="exampleInputPassword1">Password</label>
+					    <input type="password" class="form-control" data-ng-model="auth.data.password" placeholder="Password">
+			  	    </div>	  
+					<button type="submit" class="btn btn-success btn-lg" data-ng-click="auth.signupProcess()">Signup</button>
+					&nbsp;or&nbsp; 
+					<button type="submit" class="btn btn-primary btn-lg" data-ng-click="auth.loginProcess()">Login</button>
+				</form>
+		    </div>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<div class="img-reponsive-container">
+				<img src="/images/character_malewarrior.jpg" class="img-responsive">
+			</div>
+		</div>
+		
+    </div>
+</div>

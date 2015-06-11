@@ -1,0 +1,88 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 col-sm-6">
+			<div class="container-fluid">
+				<div class="row">
+			    	<div class="alert alert-danger" role="alert" data-ng-show="app.errorShow == true">
+						<button type="button" class="close" aria-label="Close" data-ng-click="app.errorShow = false"><span aria-hidden="true">&times;</span></button>
+						{{ app.errorMessage }}
+					</div>
+					
+					<div class="col-xs-12">
+						<div class="text-center" style="padding-top:10px;">
+							<button type="submit" class="btn btn-success btn-lg" data-ng-click="app.openProducts()">Buy Unicorns</button>
+						</div>
+					</div>
+					
+					<div class="col-xs-12" style="padding-top:10px;">
+						<div class="text-center">
+							<button type="submit" class="btn btn-danger btn-lg" data-ng-click="game.loadFight()" data-ng-show="game.user.hp > 0">Find something to Kill!</button>
+						</div>
+						
+						<div class="text-center" style="padding-top:10px;">
+							<button type="submit" class="btn btn-primary btn-lg" data-ng-click="app.openRevive()" data-ng-show="game.user.hp <= 0">Revive</button>
+						</div>
+					</div>
+					
+					<div class="col-xs-12">
+						<h3>Character Information</h3>
+						<table class="table table-striped table-bordered table-condensed">
+							<tbody>
+								<tr>
+									<th scope="row">Email</th>
+									<td>{{game.user.email}}</td>
+								</tr>
+								<tr>
+									<th scope="row">Experience Level</th>
+									<td>{{game.user.experienceLevel}}</td>
+								</tr>
+								<tr>
+									<th scope="row">Experience Points</th>
+									<td>{{game.user.experiencePoints}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<div class="col-xs-12 col-md-6">
+						<div class="well">
+							<div class="row" style="display:flex;align-items:center;">
+								<div class="col-xs-12 col-sm-8">
+									<div class="img-responsive-container">
+										<img src="/images/hp.png" class="img-responsive">
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-4">
+									<h1>{{game.user.hp}}</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-xs-12 col-md-6">
+						<div class="well">
+							<div class="row" style="display:flex;align-items:center;">
+								<div class="col-xs-12 col-sm-8">
+									<div class="img-responsive-container">
+										<img src="/images/unicorn.png" class="img-responsive">
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-4">
+									<h1 style="text-align:left;">{{game.user.unicorns}}</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<div class="img-responsive-container" style="margin:10px;">
+				<img src="/images/dungeon_entrance.jpg" class="img-responsive">
+			</div>
+		</div>
+	
+    </div>
+</div>

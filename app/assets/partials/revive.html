@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+    	<div class="alert alert-danger" role="alert" data-ng-show="app.errorShow == true">
+			<button type="button" class="close" aria-label="Close" data-ng-click="app.errorShow = false"><span aria-hidden="true">&times;</span></button>
+			{{ app.errorMessage }}
+		</div>
+		
+	    <div class="col-xs-12">
+	    	<h2 class="text-center">You have {{user.unicorns}} Unicorns.</h2>
+	    </div>
+	    <div class="col-xs-12">
+			<div class="text-center" style="padding-top:10px;">
+				<button type="submit" class="btn btn-success btn-lg" data-ng-click="buyRevive()">Revive for {{fee}} Unicorns</button>
+			</div>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="col-xs-12">
+	    	<div class="img-responsive-container">
+				<img src="/images/revive.jpg" class="img-responsive" style="margin:0 auto;padding-top:20px;">
+			</div>
+	    </div>
+	    <div class="col-xs-12">
+	    	<h4 class="text-center">It's a new day, try not to die so quickly next time.</h4>
+	    </div>
+	</div>
+	
+</div>

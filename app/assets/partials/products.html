@@ -1,0 +1,20 @@
+<div class="container-fluid">
+	<div class="row">
+		<button data-ng-click="closeModal()" class="btn btn-sm btn-default pull-right">&times;</button>
+	</div>
+    <div class="row">
+   		<div data-ng-repeat="product in products" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">		
+   			<div class="well">
+				<div class="row">
+	   				<h3 class="text-center">{{product.name}}</h3>
+	   				<div class="img-responsive-container">
+						<img src="/images/unicorn.png" class="img-responsive" style="margin:0 auto;padding-top:10px;">
+					</div>
+					<div class="text-center" style="padding-top:10px;">
+						<button type="submit" class="btn btn-success btn-lg" data-ng-click="buyProduct(product.id)">{{product.tokens}} for ${{product.price}}</button>
+					</div>
+				</div>
+   			</div>
+   		</div>
+	</div>
+</div>

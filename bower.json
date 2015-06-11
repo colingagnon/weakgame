@@ -1,0 +1,41 @@
+{
+  "name": "WEAKGAME",
+  "version": "0.1.0",
+  "dependencies": {
+    "angular": "~1.3.9",
+    "angular-resource": "~1.3.9",
+    "angular-sanitize": "~1.3.9",
+    "angular-mocks": "~1.3.9",
+    "angular-ui-router": "0.2.14",
+    "jquery": "~2.1.3",
+    "lodash": "~2.4.1",
+    "ocModal": "~0.1.10",
+    "bootstrap-sass-official": "~3.3.4",
+    "jsonld": "~0.3.22",
+    "modernizr": "~2.8.3"
+  },
+  "overrides": {
+    "angular-mocks": {
+      "main": ["angular-mocks.js"]
+    },
+    "modernizr": {
+      "main": "modernizr.js"
+    },
+    "lodash": {
+      "main": "dist/lodash.js"
+    },
+    "bootstrap-sass-official": {
+      "main": [
+		"assets/stylesheets/_bootstrap.scss",
+		"assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+		"assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+		"assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+		"assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
+		"assets/javascripts/bootstrap.js"
+		]
+    }
+  },
+  "resolutions": {
+    "angular": "~1.3.9"
+  }
+}

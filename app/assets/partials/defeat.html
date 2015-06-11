@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+		<div class="col-xs-offset-4 col-xs-4">
+	    	<div class="alert alert-danger" role="alert" data-ng-show="app.errorShow == true" style="max-width:500px;">
+				<button type="button" class="close" aria-label="Close" data-ng-click="app.errorShow = false"><span aria-hidden="true">&times;</span></button>
+				{{ app.errorMessage }}
+			</div>
+	    </div>
+	    <div class="col-xs-12">
+	    	<h2 class="text-center">Guess you died.</h2>
+	    </div>
+	    <div class="col-xs-12">
+			<div class="text-center" style="padding-top:10px;">
+				<button type="submit" class="btn btn-success btn-lg" data-ng-click="app.openProducts()">Buy Unicorns</button>
+			</div>
+			<div class="text-center" style="padding-top:10px;">
+				<button type="submit" class="btn btn-primary btn-lg" data-ng-click="app.openRevive()">Revive Yourself</button>
+			</div>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="col-xs-12">
+	    	<div class="img-responsive-container">
+				<img src="/images/defeat.jpg" class="img-responsive" style="margin:0 auto;padding-top:20px;">
+			</div>
+	    </div>
+	    <div class="col-xs-12">
+	    	<h4 class="text-center">Sorry about that. Here's a nice painting to make you feel better.</h4>
+	    </div>
+	</div>
+</div>

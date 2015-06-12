@@ -2,9 +2,9 @@
 angular.module('app', ['ngResource', 'ngSanitize', 'ui.router', 'oc.modal', 'GameServices'])
 	.constant('VERSION', '0.0.1')
 	// CHANGE THIS TO POINT THE APP AT A DIFFERENT DOMAIN
-	//.constant('APIDOMAIN', 'http://weakgame.maxxjs.com:8080')
+	.constant('APIDOMAIN', 'http://weakgame.maxxjs.com:8080')
 	//.constant('APIDOMAIN', 'http://weakgame.maxxjs.local:8080')
-	.constant('APIDOMAIN', 'http://localhost:8080')
+	//.constant('APIDOMAIN', 'http://localhost:8080')
 	.config(function appConfig($stateProvider, $locationProvider, $urlRouterProvider) {
 		$locationProvider.hashPrefix('!');
 		$urlRouterProvider.otherwise('/auth');

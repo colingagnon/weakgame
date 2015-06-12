@@ -19,7 +19,7 @@ npm install
 npm start
 ```
 
-Now to go: http://localhost:3333
+Now to go: [http://localhost:3333](http://localhost:3333)
 
 #### Usage
 ```

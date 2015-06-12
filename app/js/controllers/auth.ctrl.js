@@ -12,8 +12,8 @@ angular.module('app').controller('AuthCtrl', ['$location', '$scope', 'Signup', '
 	// Init data
 	// TODO remove this init data
 	auth.data = {};
-	auth.data.email = 'test@test.com';
-	auth.data.password = 'test123';
+	//auth.data.email = 'test@test.com';
+	//auth.data.password = 'test123';
 	
 	// Setup empty error
 	auth.errorShow = false;

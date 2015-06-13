@@ -16,6 +16,7 @@ npm install -g brunch
 git clone https://github.com/colingagnon/weakgame.git
 cd weakgame
 npm install
+bower install
 npm start
 ```
 

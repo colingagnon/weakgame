@@ -20,11 +20,13 @@
 				<h3>Combat Log</h3>
 				<table class="table table-striped table-bordered table-condensed">
 					<thead>
+						<th>Round</th>
 						<th>Action</th>
 						<th>Damages</th>
 					</thead>
 					<tbody ng-repeat="combatlog in fight.combatlogs">
 						<tr>
+							<td>{{combatlog.round}}</td>
 							<td>{{combatlog.action}}</td>
 							<td>{{combatlog.dmg}}</td>
 						</tr>

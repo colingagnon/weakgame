@@ -20,6 +20,8 @@ angular.module('app').controller('FightCtrl', ['$location', 'Round', 'Login', 'G
 	// Combat log 
 	var combatlog = [];
 
+	var fightNumber = 1;
+
 	function loadRound() {
 		Round.get(fight.round, function success(round){
 			var delta = 0;
@@ -28,18 +30,18 @@ angular.module('app').controller('FightCtrl', ['$location', 'Round', 'Login', 'G
 				loadFightAnimations($('body'), 'jello');
 
 				delta = Math.abs(round.userCurrentHp - fight.data.userCurrentHp);
-				combatlog.push({action: 'Damage received', dmg: delta });
+				combatlog.unshift({round: fightNumber, action: 'Damage received', dmg: delta });
 
 			} else if (round.monsterCurrentHp < fight.data.monsterCurrentHp) {
 				// dmg done
 				loadFightAnimations($('#fightMonster'), 'shake');
 
 				delta = Math.abs(round.monsterCurrentHp - fight.data.monsterCurrentHp);
-				combatlog.push({action: 'Damage monster', dmg: delta });
+				combatlog.unshift({round: fightNumber, action: 'Damage monster', dmg: delta });
 			} else {
 				// fizzle
 				loadFightAnimations($('#fightMonster'), 'flipOutX');
-				combatlog.push({action: 'Miss', dmg: 0 });
+				combatlog.unshift({round: fightNumber, action: 'Miss', dmg: 0 });
 			}
 
 			GameData.setFightData(round);
@@ -65,6 +67,8 @@ angular.module('app').controller('FightCtrl', ['$location', 'Round', 'Login', 'G
 					loadUserData();
 				});
 			}
+
+			fightNumber++;
 		}, function error (err) {
 			$location.path('game');
 			// TODO error handling for fight rounds

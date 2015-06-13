@@ -28,22 +28,23 @@ angular.module('app').controller('FightCtrl', ['$location', 'Round', 'Login', 'G
 				loadFightAnimations($('body'), 'jello');
 
 				delta = Math.abs(round.userCurrentHp - fight.data.userCurrentHp);
-				combatlog.push({action: 'dmgreceived', dmg: delta});
+				combatlog.push({action: 'Damage received', dmg: delta });
 
 			} else if (round.monsterCurrentHp < fight.data.monsterCurrentHp) {
 				// dmg done
 				loadFightAnimations($('#fightMonster'), 'shake');
 
 				delta = Math.abs(round.monsterCurrentHp - fight.data.monsterCurrentHp);
-				combatlog.push({action: 'dmgdone', dmg: delta});
+				combatlog.push({action: 'Damage monster', dmg: delta });
 			} else {
 				// fizzle
 				loadFightAnimations($('#fightMonster'), 'flipOutX');
-				combatlog.push({action: 'miss', dmg: 0});
+				combatlog.push({action: 'Miss', dmg: 0 });
 			}
 
 			GameData.setFightData(round);
 			fight.data = round;
+			fight.combatlogs = combatlog;
 
 			// Check if player now dead
 			if (round.userCurrentHp <= 0) {

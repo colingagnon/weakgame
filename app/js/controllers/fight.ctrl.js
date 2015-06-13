@@ -21,10 +21,10 @@ angular.module('app').controller('FightCtrl', ['$location', 'Round', 'Login', 'G
 		Round.get(fight.round, function success(round){
 			if (round.userCurrentHp < fight.data.userCurrentHp) {
 				loadFightAnimations($('body'), 'jello');
-			}
-
-			if (round.monsterCurrentHp < fight.data.monsterCurrentHp) {
+			} else if (round.monsterCurrentHp < fight.data.monsterCurrentHp) {
 				loadFightAnimations($('#fightMonster'), 'shake');
+			} else {
+				loadFightAnimations($('#fightMonster'), 'flipOutX');
 			}
 
 			GameData.setFightData(round);
@@ -42,9 +42,9 @@ angular.module('app').controller('FightCtrl', ['$location', 'Round', 'Login', 'G
 			
 			// Check if monster now dead
 			if (round.monsterCurrentHp <= 0) {
-				$('body').addClass('animated tada');
-				$('body').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-					$('body').removeClass('animated tada');
+				$('#fightMonster').addClass('animated hinge');
+				$('#fightMonster').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+					$('#fightMonster').removeClass('animated hinge');
 					$location.path('victory');
 					loadUserData();
 				});

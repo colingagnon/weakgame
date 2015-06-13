@@ -5,11 +5,11 @@
 				<tbody>
 					<tr>
 						<th scope="row">Your HP</th>
-						<td>{{fight.data.userCurrentHp}}</td>
+						<td id="userCurrentHp">{{fight.data.userCurrentHp}}</td>
 					</tr>
 					<tr>
 						<th scope="row">Monster HP</th>
-						<td>{{fight.data.monsterCurrentHp}}</td>
+						<td id="monsterCurrentHp">{{fight.data.monsterCurrentHp}}</td>
 					</tr>
 				</tbody>
 			</table>
@@ -26,7 +26,7 @@
 				</div>
 				<div class="col-xs-12 col-sm-4">
 					<div class="img-responsive-container" style="margin:10px;">
-						<img src="/images/monsters/{{fight.monster.url}}" class="img-responsive">
+						<img id="fightMonster" src="/images/monsters/{{fight.monster.url}}" class="img-responsive">
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4">

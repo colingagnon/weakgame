@@ -32,6 +32,19 @@ npm run prod
 ```
 
 #### About this repository
+
+User Stories
+https://docs.google.com/document/d/1WSDrucOtxvrca74oM1DzlRKOmHXLhOuPw3wDlvvly6g/edit?usp=sharing
+
+Front-end
+https://github.com/colingagnon/weakgame
+
+Back-end
+https://github.com/colingagnon/weakgame-api
+
+Virtualbox
+https://www.dropbox.com/s/libw3a54muaou1w/weakgame.ova?dl=0
+
 This repository was originally created to be used in a "hack day" for a project management class.  The students are given 1 working day to try and complete some of the additional features. At this point this is super rough, mostly intentionally, but I could see it being developed as a way to test skills for the interview process, or as a rather tool for current employees.
 
 #### User Stories

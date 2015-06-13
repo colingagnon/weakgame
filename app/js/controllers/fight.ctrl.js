@@ -17,14 +17,29 @@ angular.module('app').controller('FightCtrl', ['$location', 'Round', 'Login', 'G
 	fight.data = GameData.getFightData();
 	fight.monster = GameData.getMonsterData();
 	
+	// Combat log 
+	var combatlog = [];
+
 	function loadRound() {
 		Round.get(fight.round, function success(round){
+			var delta = 0;
 			if (round.userCurrentHp < fight.data.userCurrentHp) {
+				// dmg received
 				loadFightAnimations($('body'), 'jello');
+
+				delta = Math.abs(round.userCurrentHp - fight.data.userCurrentHp);
+				combatlog.push({action: 'dmgreceived', dmg: delta});
+
 			} else if (round.monsterCurrentHp < fight.data.monsterCurrentHp) {
+				// dmg done
 				loadFightAnimations($('#fightMonster'), 'shake');
+
+				delta = Math.abs(round.monsterCurrentHp - fight.data.monsterCurrentHp);
+				combatlog.push({action: 'dmgdone', dmg: delta});
 			} else {
+				// fizzle
 				loadFightAnimations($('#fightMonster'), 'flipOutX');
+				combatlog.push({action: 'miss', dmg: 0});
 			}
 
 			GameData.setFightData(round);

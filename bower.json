@@ -12,11 +12,14 @@
     "ocModal": "~0.1.10",
     "bootstrap-sass-official": "~3.3.4",
     "jsonld": "~0.3.22",
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "animate.css": "~3.3.0"
   },
   "overrides": {
     "angular-mocks": {
-      "main": ["angular-mocks.js"]
+      "main": [
+        "angular-mocks.js"
+      ]
     },
     "modernizr": {
       "main": "modernizr.js"
@@ -26,13 +29,13 @@
     },
     "bootstrap-sass-official": {
       "main": [
-		"assets/stylesheets/_bootstrap.scss",
-		"assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
-		"assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
-		"assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
-		"assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
-		"assets/javascripts/bootstrap.js"
-		]
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
+        "assets/javascripts/bootstrap.js"
+      ]
     }
   },
   "resolutions": {
